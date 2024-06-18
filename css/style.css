@@ -132,15 +132,15 @@ body {
   border-right: none;    
 }
 
-.header_svg_item {
-  width: 3.4em;
-  height: 3.4em;
+.header_svg_item a{
+  width: 2.7em;
+  height: 2.7em;
   cursor: pointer;
-  margin: 0 -.35em;
-  margin-bottom: -.35em;
+  margin: 0 .35em;
+  margin-bottom: .5em;
 }
 
-.header_svg_item:hover {
+.header_svg_item a:hover {
   transform: scale(1.30);
   transition: 0.20s ease;
 }
@@ -154,14 +154,17 @@ body {
 }
 
 .header_svg_item a {
-  display: inline-block;
-  width: 2em;
-  height: 2em;
+  display: inline-block;  
   opacity: .9;
 }
 
 .header_svg_item a:hover {
   opacity: 1;
+}
+
+.header_svg_item.whatsapp_grupo a {
+  background: url("../img/grupo.png") no-repeat center;
+  background-size: cover;
 }
 
 .header_svg_item.whatsapp a {
