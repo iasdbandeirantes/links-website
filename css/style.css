@@ -124,20 +124,25 @@ body {
 
 /* Social Media Icons Codes */
 
-.header_svg_list {
+.header_svg_list {  
   padding-top: 1em;
-  margin: .5em 0;
+  margin: .5em ;
+  border: 1px solid #4c166f;
+  border-left: none;
+  border-right: none;    
 }
 
 .header_svg_item {
-  width: 3.2em;
-  height: 3.2em;
+  width: 3.4em;
+  height: 3.4em;
   cursor: pointer;
+  margin: 0 -.35em;
+  margin-bottom: -.35em;
 }
 
 .header_svg_item:hover {
-  transform: scale(1.10);
-  transition: 0.10s ease;
+  transform: scale(1.30);
+  transition: 0.20s ease;
 }
 
 .header_svg_item+.header_svg_item {
