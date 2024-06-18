@@ -2,13 +2,13 @@
 :root {
 
   /* You can change the font family in the whole design here. (You need to add the font family to the codes.) */
-  --font_family: 'Inter', sans-serif;
+  --font_family: sans-serif;
 
   /* You can change the font size here, is proportional to all texts. */
-  --font_size: 16px;
+  --font_size: 1em;
 
   /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
-  --background_color: #000;
+  --background_color: #eee;
   --background_image: url("../img/wallpaper.jpg");
 
   /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
@@ -16,25 +16,25 @@
   --image_border_px: 3px;
 
   /* You can change the width and size of the picture by typing the number of pixels. */
-  --image_width: 140px;
-  --image_height: 140px;
+  --image_width: 16em;
+  --image_height: 16em;
 
   /* You can change the colors of the title and description section by typing the color codes. */
-  --title_color: #fff;
-  --description_color: #f1c40f;
+  --title_color: #2b92db;
+  --description_color: #111;
 
   /* You can change the colors of social media icons by changing the color code. */
-  --svg_color: #fff;
+  --svg_color: #333;
 
   /* You can change the background, text color and active color of the menu by changing the color codes. */
-  --menu_background_color: #0e0e0e;
-  --menu_text_color: #fff;
-  --menu_active_text_color: #f1c40f;
+  --menu_background_color: #e0e0e0;
+  --menu_text_color: #111;
+  --menu_active_text_color: #2b92db;
 
   /* You can change the button's background, text color and active color by changing the color codes. */
-  --button_background_color: #0e0e0e;
-  --button_text_color: #fff;
-  --button_text_hover_color: #f1c40f;
+  --button_background_color: #e0e0e0;
+  --button_text_color: #111;
+  --button_text_hover_color: #2b92db;
 
   /* You can change the background, text color and active color of the text field by changing the color codes. */
   --textarea_background_color: #0e0e0e;
@@ -68,6 +68,14 @@ body {
   align-items: center;
 }
 
+.flex_column_center  > h2{
+  padding: .5em;
+  text-align: left;
+  margin-top: 2em;  
+  text-align: left;
+  font-weight: bold;
+}
+
 .flex_row_center {
   display: flex;
   flex-direction: row;
@@ -93,30 +101,33 @@ body {
 .header_img img {
   height: var(--image_height);
   width: var(--image_width);
-  border: var(--image_border_px) solid var(--image_border_color);
-  border-radius: 50%;
+  /*border: var(--image_border_px) solid var(--image_border_color);*/
+  /*border-radius: 50%;*/
   margin-bottom: 0.5em;
 }
 
 .header_text h1 {
   color: var(--title_color);
   font-size: 2em;
+  line-height: 1.1em;
 }
 
 .header_text h2 {
   color: var(--description_color);
   font-size: 1.5em;
+  line-height: 1.1em;
 }
 
 /* Social Media Icons Codes */
 
 .header_svg_list {
   padding-top: 1em;
+  margin: .5em 0;
 }
 
 .header_svg_item {
-  width: 2.1em;
-  height: 2.1em;
+  width: 3.2em;
+  height: 3.2em;  
   cursor: pointer;
 }
 
@@ -126,11 +137,42 @@ body {
 }
 
 .header_svg_item + .header_svg_item {
-  margin-left: 1em;
+  margin-left: 0;
 }
 
 .header_svg_item svg {
   fill: var(--svg_color);
+}
+
+.header_svg_item a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  opacity: .7;
+}
+
+.header_svg_item a:hover{
+  opacity: 1;
+}
+
+.header_svg_item.whatsapp a{
+  background: url("../img/square-whatsapp.svg") no-repeat center;  
+}
+
+.header_svg_item.instagran a{
+  background: url("../img/square-instagram.svg") no-repeat center;  
+}
+
+.header_svg_item.youtube a{
+  background: url("../img/square-youtube.svg") no-repeat center;  
+}
+
+.header_svg_item.site a{
+  background: url("../img/globe-solid.svg") no-repeat center;  
+}
+
+.header_svg_item.facebook a{
+  background: url("../img/square-facebook.svg") no-repeat center;  
 }
 
 /* Menu Codes */
@@ -188,13 +230,12 @@ main {
   align-items: center;
   justify-content: center;
   color: var(--button_text_color);
-  background-color: var(--button_background_color);
+  text-align: justify;
   width: 41em;
   margin-top: 1em;
   padding: 0.8em;
   border-radius: 0.3em;
-  min-height: 3.7em;
-  text-align: center;
+  min-height: 3.7em;  
 }
 
 .main_button_item {
@@ -205,11 +246,19 @@ main {
   min-height: 3.7em;
   text-align: center;
   cursor: pointer;
+  line-height: 1em;
+}
+
+.main_small_button_list img{
+  height: 1.2em;
+  margin-right: .4em;
+  margin-bottom: -.25em;
 }
 
 .main_small_button_list {
   display: flex;
   flex-direction: row;
+  line-height: 1em;
 }
 
 .main_small_a_item {
